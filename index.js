@@ -1,5 +1,5 @@
 "use strict";
-//* vid 2
+//* VID: 2
 let str = "hello";
 let num = 1;
 let bool = true;
@@ -10,7 +10,7 @@ b = "Unknown";
 // @ts-ignore
 console.log(str, num, bool, fullName, b);
 // @ts-ignore
-// * vid 3
+// * VID: 3
 // Write a function to add two numbers
 // Catch errors & solve them
 // Ts Config File
@@ -18,12 +18,12 @@ function sum(a, b) {
     return a + b;
 }
 console.log(sum(1, 14));
-//* vid 4
+//* VID: 4
 // ? Type Annotation
 //* Specifying type of a variable, function or class
 let a = "TypeScript Type Annotation";
 console.log(a);
-// * vid 5
+// * VID: 5
 // Big Int
 let intMaxValue = Number.MAX_SAFE_INTEGER;
 console.log("Max Int: ", intMaxValue);
@@ -38,7 +38,7 @@ let divBigInt = bigInt / bigInt2;
 console.log("Sum BigInt:", sumBigInt);
 console.log("Mul BigInt:", mulBigInt);
 console.log("Div BigInt:", divBigInt);
-// * vid 6
+// * VID: 6
 // Unknown and any
 // Using `any`
 let anyValue;
@@ -61,10 +61,10 @@ if (typeof unknownValue === "string") {
 if (typeof unknownValue === "number") {
     console.log(unknownValue.toFixed(2)); // Safe, because TypeScript knows it's a number
 }
-// * vid 7
+// * VID: 7
 //  Type inference is when the compiler can infer the type of a variable or function based on its usage.
 //  Type Annotation is when we explicitly declare the type of a variable or function.
-// * vid 8
+// * VID: 8
 // Functions
 //  Fat arrow function
 const greet = (name) => {
@@ -89,3 +89,12 @@ const maxNum = (arr) => {
     return maxNum;
 };
 console.log(maxNum(arr));
+// * VID: 9
+// Default and Optional Parameters
+const greet2 = (name, id, greeting = "Hello") => {
+    if (id) {
+        return `${greeting}, ${name}! Your ID is ${id}.`;
+    }
+    return `${greeting}, ${name}!`;
+};
+console.log(greet2("Mujeeb Ur Rehman", 1));

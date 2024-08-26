@@ -114,4 +114,11 @@ console.log(maxNum(arr));
 
 // * VID: 9
 // Default and Optional Parameters
+const greet2 = (name: string, id?: number, greeting: string = "Hello"): string => {
+  if (id) {
+    return `${greeting}, ${name}! Your ID is ${id}.`;
+  }
+  return `${greeting}, ${name}!`;
+}
 
+console.log(greet2("Mujeeb Ur Rehman", 1));
