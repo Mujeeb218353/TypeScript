@@ -98,3 +98,16 @@ const greet2 = (name, id, greeting = "Hello") => {
     return `${greeting}, ${name}!`;
 };
 console.log(greet2("Mujeeb Ur Rehman", 1));
+// * VID: 10
+// Array
+// Array Using square brackets
+let arr1 = [1, 2, 3, 4, 5];
+// Array Using Array constructor
+let arr2 = [1, 2, 3, 4, 5];
+let arr3 = new Array(1, 2, 3, 4, 5);
+// Array Using Array.from
+let arr4 = Array.from(["M", "u", "j", "e", "e", "b"]);
+console.log(arr4[0]);
+// Array Using Array.of
+let arr5 = Array.of(1, 2, 3, 4, 5);
+console.log(arr1[4]);

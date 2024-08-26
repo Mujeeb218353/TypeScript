@@ -122,3 +122,23 @@ const greet2 = (name: string, id?: number, greeting: string = "Hello"): string =
 }
 
 console.log(greet2("Mujeeb Ur Rehman", 1));
+
+// * VID: 10
+// Array
+
+// Array Using square brackets
+let arr1: number[] = [1, 2, 3, 4, 5];
+
+// Array Using Array constructor
+let arr2: Array<number> = [1, 2, 3, 4, 5];
+let arr3: number[] = new Array(1, 2, 3, 4, 5);
+
+// Array Using Array.from
+let arr4: string[] = Array.from(["M", "u", "j", "e", "e", "b"]);
+console.log(arr4[0]);
+
+
+// Array Using Array.of
+let arr5: number[] = Array.of(1, 2, 3, 4, 5);
+
+console.log(arr1[4]);
