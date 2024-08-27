@@ -134,3 +134,15 @@ console.log(doubleNumbers);
 // Filter Method will not modify the original array but will return a new array
 const evenNumbers = numbers.filter((num) => num % 2 === 0);
 console.log(evenNumbers);
+// * VID: 13
+// Objects
+const user = {
+    name: "Mujeeb Ur Rehman",
+    age: 23,
+    isStudent: true,
+    address: {
+        city: "Karachi",
+        country: "Pakistan",
+    },
+};
+console.log(user);

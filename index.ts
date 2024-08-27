@@ -176,3 +176,26 @@ console.log(doubleNumbers);
 
 const evenNumbers: number[] = numbers.filter((num: number): boolean => num % 2 === 0);
 console.log(evenNumbers);
+
+// * VID: 13
+// Objects
+
+const user:{
+  name: string;
+  age: number;
+  isStudent: boolean;
+  address: {
+    city: string;
+    country: string;
+  };
+} = {
+  name: "Mujeeb Ur Rehman",
+  age: 23,
+  isStudent: true,
+  address: {
+    city: "Karachi",
+    country: "Pakistan",
+  },
+};
+
+console.log(user);
