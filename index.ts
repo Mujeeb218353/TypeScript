@@ -141,3 +141,25 @@ console.log(arr4[0]);
 let arr5: number[] = Array.of(1, 2, 3, 4, 5);
 
 console.log(arr1[4]);
+
+// * VID: 11
+// Array Iteration and Methods
+
+const fruits: string[] = ["apple", "banana", "orange"];
+const newFruits = fruits.push("grape");
+console.log(fruits);
+console.log(newFruits); // it returns the new length of the array not the array itself
+
+for(let i = 0; i < fruits.length; i++){
+  console.log(fruits[i]);
+}
+
+fruits.forEach((fruit) => console.log("Foreach: ",fruit));
+
+fruits.map((fruit) => console.log("map: ",fruit));
+
+fruits.filter((fruit) => console.log("filter: ",fruit));
+
+for (const fruit of fruits) {
+  console.log('for of: ',fruit);
+}
