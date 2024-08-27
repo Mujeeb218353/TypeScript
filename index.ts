@@ -260,3 +260,19 @@ const student1: Student = {
 };  
 
 console.log(student1.greeting("Pakistan"));
+
+// Pure Function Call Signatures
+
+type MyObject = {
+  (input: string): string; // Call signature
+  propertyName: string;    // Property
+};
+
+const myObject: MyObject = (input: string) => {
+  return `Hello, ${input}!`;
+};
+
+myObject.propertyName = "Greeting Function";
+
+console.log(myObject("World")); // Output: Hello, World!
+console.log(myObject.propertyName); // Output: Greeting Function

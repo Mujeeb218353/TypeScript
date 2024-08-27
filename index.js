@@ -171,3 +171,9 @@ const student1 = {
     greeting: (country) => `Hello, I am ${student1.name} and I am ${student1.age} years old and I live in ${country}.`,
 };
 console.log(student1.greeting("Pakistan"));
+const myObject = (input) => {
+    return `Hello, ${input}!`;
+};
+myObject.propertyName = "Greeting Function";
+console.log(myObject("World")); // Output: Hello, World!
+console.log(myObject.propertyName); // Output: Greeting Function
