@@ -137,7 +137,6 @@ let arr3: number[] = new Array(1, 2, 3, 4, 5);
 let arr4: string[] = Array.from(["M", "u", "j", "e", "e", "b"]);
 console.log(arr4[0]);
 
-
 // Array Using Array.of
 let arr5: number[] = Array.of(1, 2, 3, 4, 5);
 
