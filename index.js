@@ -146,3 +146,22 @@ const user = {
     },
 };
 console.log(user);
+const user2 = {
+    name: "Mujeeb Ur Rehman",
+    age: 23,
+    isStudent: true,
+    address: {
+        city: "Shp",
+        country: "Pakistan",
+    },
+};
+console.log(user2);
+const product = {
+    name: "Laptop",
+    price: 1000,
+    quantity: 10,
+};
+const calculateTotalPrice = (product) => {
+    return product.price * product.quantity;
+};
+console.log("Total Price:", calculateTotalPrice(product));

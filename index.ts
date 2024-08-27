@@ -199,3 +199,47 @@ const user:{
 };
 
 console.log(user);
+
+// * VID: 14
+// Type Aliases
+
+type Person = {
+  name: string;
+  age: number;
+  isStudent: boolean;
+  class?: string;
+  address: {
+    city: string;
+    country: string;
+  };
+};
+
+const user2: Person = {
+  name: "Mujeeb Ur Rehman",
+  age: 23,
+  isStudent: true,
+  address: {
+    city: "Shp",
+    country: "Pakistan",
+  },
+};
+
+console.log(user2);
+
+type Product = {
+  name: string;
+  price: number;
+  quantity: number;
+};
+
+const product : Product = {
+  name: "Laptop",
+  price: 1000,
+  quantity: 10,
+};
+
+const calculateTotalPrice = (product: Product): number => {
+  return product.price * product.quantity;
+};
+
+console.log("Total Price:",calculateTotalPrice(product));
