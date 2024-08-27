@@ -274,5 +274,38 @@ const myObject: MyObject = (input: string) => {
 
 myObject.propertyName = "Greeting Function";
 
-console.log(myObject("World")); // Output: Hello, World!
-console.log(myObject.propertyName); // Output: Greeting Function
+console.log(myObject("World")); 
+console.log(myObject.propertyName); 
+
+// * VID: 16
+// Enums
+
+enum Roles {
+  user = "user",
+  admin = "admin"
+}
+
+type LoginDetails = {
+  email: string;
+  password: string;
+  role: Roles;
+}
+
+const loginDetails1: LoginDetails = {
+  email: "UQO8P@example.com",
+  password: "123456",
+  role: Roles.admin,
+}
+
+const loginDetails2: LoginDetails = {
+  email: "UQO8P@example.com",
+  password: "123456",
+  role: Roles.user,
+}
+
+const userLogin = (loginDetails: LoginDetails): string => {
+  return `Hello, ${loginDetails.email} and your role is ${loginDetails.role}`
+}
+
+console.log(userLogin(loginDetails1));
+console.log(userLogin(loginDetails2));

@@ -175,5 +175,27 @@ const myObject = (input) => {
     return `Hello, ${input}!`;
 };
 myObject.propertyName = "Greeting Function";
-console.log(myObject("World")); // Output: Hello, World!
-console.log(myObject.propertyName); // Output: Greeting Function
+console.log(myObject("World"));
+console.log(myObject.propertyName);
+// * VID: 16
+// Enums
+var Roles;
+(function (Roles) {
+    Roles["user"] = "user";
+    Roles["admin"] = "admin";
+})(Roles || (Roles = {}));
+const loginDetails1 = {
+    email: "UQO8P@example.com",
+    password: "123456",
+    role: Roles.admin,
+};
+const loginDetails2 = {
+    email: "UQO8P@example.com",
+    password: "123456",
+    role: Roles.user,
+};
+const userLogin = (loginDetails) => {
+    return `Hello, ${loginDetails.email} and your role is ${loginDetails.role}`;
+};
+console.log(userLogin(loginDetails1));
+console.log(userLogin(loginDetails2));
