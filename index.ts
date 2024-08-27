@@ -243,3 +243,20 @@ const calculateTotalPrice = (product: Product): number => {
 };
 
 console.log("Total Price:",calculateTotalPrice(product));
+
+// * VID: 15
+// Function Call Signatures
+// Call Signature is defining the parameters and return type of a function in an object or interface or class or type alias.
+type Student = {
+  name: string;
+  age: number;
+  greeting: (country: string) => string;
+};
+
+const student1: Student = {
+  name: "Mujeeb Ur Rehman",
+  age: 23,
+  greeting: (country): string => `Hello, I am ${student1.name} and I am ${student1.age} years old and I live in ${country}.`,
+};  
+
+console.log(student1.greeting("Pakistan"));

@@ -165,3 +165,9 @@ const calculateTotalPrice = (product) => {
     return product.price * product.quantity;
 };
 console.log("Total Price:", calculateTotalPrice(product));
+const student1 = {
+    name: "Mujeeb Ur Rehman",
+    age: 23,
+    greeting: (country) => `Hello, I am ${student1.name} and I am ${student1.age} years old and I live in ${country}.`,
+};
+console.log(student1.greeting("Pakistan"));
