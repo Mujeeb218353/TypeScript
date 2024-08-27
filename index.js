@@ -126,3 +126,11 @@ fruits.filter((fruit) => console.log("filter: ", fruit));
 for (const fruit of fruits) {
     console.log('for of: ', fruit);
 }
+// * VID: 12
+// Filter and Map Methods
+// Map Method will not modify the original array but will return a new array
+const doubleNumbers = numbers.map((num) => num * 2);
+console.log(doubleNumbers);
+// Filter Method will not modify the original array but will return a new array
+const evenNumbers = numbers.filter((num) => num % 2 === 0);
+console.log(evenNumbers);
