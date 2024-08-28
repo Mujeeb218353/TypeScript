@@ -199,3 +199,5 @@ const userLogin = (loginDetails) => {
 };
 console.log(userLogin(loginDetails1));
 console.log(userLogin(loginDetails2));
+const person2Info = ["Mujeeb Ur Rehman", 23, true];
+console.log(person2Info);

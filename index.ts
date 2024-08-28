@@ -309,3 +309,12 @@ const userLogin = (loginDetails: LoginDetails): string => {
 
 console.log(userLogin(loginDetails1));
 console.log(userLogin(loginDetails2));
+
+// * VID: 17
+// Tuples
+
+type PersonInfo = [string, number, boolean]
+
+const person2Info: PersonInfo = ["Mujeeb Ur Rehman", 23, true];
+
+console.log(person2Info);
