@@ -265,3 +265,8 @@ console.log("Number and String:", userDetails(23, "Mujeeb"));
 console.log("String and Number:", userDetails("Mujeeb", 23));
 console.log("String and Boolean:", userDetails("Mujeeb", true));
 console.log("Boolean and String:", userDetails(false, "Mujeeb"));
+const person1 = {
+    name: "Mujeeb Ur Rehman",
+    age: 23
+};
+console.log(person1);

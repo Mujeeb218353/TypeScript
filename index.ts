@@ -426,3 +426,18 @@ console.log("Number and String:",userDetails(23, "Mujeeb"));
 console.log("String and Number:",userDetails<string, number>("Mujeeb", 23));
 console.log("String and Boolean:",userDetails<string, boolean>("Mujeeb", true));
 console.log("Boolean and String:",userDetails<boolean, string>(false, "Mujeeb"));
+
+// * VID: 21
+// Interface
+
+interface Persons {
+  name: string;
+  age: number;
+}
+
+const person1: Persons = {
+  name: "Mujeeb Ur Rehman",
+  age: 23
+}
+
+console.log(person1);
