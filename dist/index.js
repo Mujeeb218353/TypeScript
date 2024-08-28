@@ -270,3 +270,4 @@ const person1 = {
     age: 23
 };
 console.log(person1);
+console.log(person1.name);

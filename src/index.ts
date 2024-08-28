@@ -441,3 +441,4 @@ const person1: Persons = {
 }
 
 console.log(person1);
+console.log(person1.name);
