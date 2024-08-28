@@ -219,3 +219,16 @@ const employeeDetails = {
     department: "IT",
 };
 console.log("Intersection:", employeeDetails);
+const userInfo = {
+    name: "Mujeeb",
+    age: 23
+};
+const locationInfo = {
+    city: "karachi",
+    country: "Pakistan"
+};
+const createAccount = (user, location) => {
+    return { ...user, ...location };
+};
+const userAccount = createAccount(userInfo, locationInfo);
+console.log(userAccount);

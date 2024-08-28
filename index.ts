@@ -352,3 +352,31 @@ const employeeDetails: EmployeeDetails = {
 }
 
 console.log("Intersection:",employeeDetails);
+
+type User = {
+  name: string;
+  age: number;
+}
+
+type LocationInfo = {
+  city: string;
+  country: string;
+}
+
+const userInfo = {
+  name: "Mujeeb",
+  age: 23
+}
+
+const locationInfo = {
+  city: "karachi",
+  country: "Pakistan"
+}
+
+const createAccount = (user: User, location: LocationInfo) => {
+  return {...user, ...location}
+}
+
+const userAccount: User & LocationInfo = createAccount(userInfo, locationInfo)
+
+console.log(userAccount);
