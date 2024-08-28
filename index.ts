@@ -313,7 +313,7 @@ console.log(userLogin(loginDetails2));
 // * VID: 17
 // Tuples
 
-type PersonInfo = [string, number, boolean]
+type PersonInfo = readonly [string, number, boolean]
 
 const person2Info: PersonInfo = ["Mujeeb Ur Rehman", 23, true];
 
