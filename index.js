@@ -212,3 +212,10 @@ const unionFunction = (a, b) => {
     }
 };
 console.log("Union:", unionFunction(1, 2));
+const employeeDetails = {
+    name: "Mujeeb Ur Rehman",
+    age: 23,
+    employeeId: 123,
+    department: "IT",
+};
+console.log("Intersection:", employeeDetails);

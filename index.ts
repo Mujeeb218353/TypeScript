@@ -331,3 +331,24 @@ const unionFunction = (a: number | string, b: number | string): number | string 
 }
 
 console.log("Union:",unionFunction(1, 2));
+
+type PersonDetails = {
+  name: string;
+  age: number;
+}
+
+type Employee = {
+  employeeId: number;
+  department: string;
+}
+
+type EmployeeDetails = PersonDetails & Employee;
+
+const employeeDetails: EmployeeDetails = {
+  name: "Mujeeb Ur Rehman",
+  age: 23,
+  employeeId: 123,
+  department: "IT",
+}
+
+console.log("Intersection:",employeeDetails);
