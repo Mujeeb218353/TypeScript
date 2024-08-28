@@ -318,3 +318,16 @@ type PersonInfo = readonly [string, number, boolean]
 const person2Info: PersonInfo = ["Mujeeb Ur Rehman", 23, true];
 
 console.log(person2Info);
+
+// * VID: 18
+// Union and Intersection 
+
+const unionFunction = (a: number | string, b: number | string): number | string => {
+  if (typeof a === "number" && typeof b === "number") {
+    return a + b;
+  } else {
+    return a.toString() + b.toString();
+  }
+}
+
+console.log("Union:",unionFunction(1, 2));

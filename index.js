@@ -201,3 +201,14 @@ console.log(userLogin(loginDetails1));
 console.log(userLogin(loginDetails2));
 const person2Info = ["Mujeeb Ur Rehman", 23, true];
 console.log(person2Info);
+// * VID: 18
+// Union and Intersection 
+const unionFunction = (a, b) => {
+    if (typeof a === "number" && typeof b === "number") {
+        return a + b;
+    }
+    else {
+        return a.toString() + b.toString();
+    }
+};
+console.log("Union:", unionFunction(1, 2));
