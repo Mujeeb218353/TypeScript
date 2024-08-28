@@ -232,3 +232,19 @@ const createAccount = (user, location) => {
 };
 const userAccount = createAccount(userInfo, locationInfo);
 console.log(userAccount);
+// * VID: 19
+// Generics
+function identity(value) {
+    return value;
+}
+console.log(identity(42)); // Output: 42
+console.log(identity("Hello")); // Output: "Hello"
+function swap(tuple) {
+    return [tuple[1], tuple[0]];
+}
+const result = swap(["Hello", 42]);
+console.log(result); // Output: [42, "Hello"]
+const numberPair = { key: 1, value: "One" };
+const stringPair = { key: "isValid", value: true };
+console.log(numberPair); // Output: { key: 1, value: "One" }
+console.log(stringPair); // Output: { key: "isValid", value: true }

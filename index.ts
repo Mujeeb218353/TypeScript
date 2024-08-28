@@ -380,3 +380,31 @@ const createAccount = (user: User, location: LocationInfo) => {
 const userAccount: User & LocationInfo = createAccount(userInfo, locationInfo)
 
 console.log(userAccount);
+
+// * VID: 19
+// Generics
+
+function identity<T>(value: T): T {
+  return value;
+}
+
+console.log(identity<number>(42));  
+console.log(identity<string>("Hello")); 
+
+function swap<T, U>(tuple: [T, U]): [U, T] {
+  return [tuple[1], tuple[0]];
+}
+
+const result = swap<string, number>(["Hello", 42]);
+console.log(result); 
+
+interface KeyValuePair<K, V> {
+  key: K;
+  value: V;
+}
+
+const numberPair: KeyValuePair<number, string> = { key: 1, value: "One" };
+const stringPair: KeyValuePair<string, boolean> = { key: "isValid", value: true };
+
+console.log(numberPair);
+console.log(stringPair); 
