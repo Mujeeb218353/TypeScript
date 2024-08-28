@@ -237,14 +237,31 @@ console.log(userAccount);
 function identity(value) {
     return value;
 }
-console.log(identity(42)); // Output: 42
-console.log(identity("Hello")); // Output: "Hello"
+console.log(identity(42));
+console.log(identity("Hello"));
 function swap(tuple) {
     return [tuple[1], tuple[0]];
 }
 const result = swap(["Hello", 42]);
-console.log(result); // Output: [42, "Hello"]
+console.log(result);
 const numberPair = { key: 1, value: "One" };
 const stringPair = { key: "isValid", value: true };
-console.log(numberPair); // Output: { key: 1, value: "One" }
-console.log(stringPair); // Output: { key: "isValid", value: true }
+console.log(numberPair);
+console.log(stringPair);
+// * VID : 20
+// Function Overloading with Generics
+const userDetails = (a, b) => {
+    if (typeof a === "string" && typeof b === "number") {
+        return `Name: ${a}, Age: ${b}`;
+    }
+    else if (typeof a === "number" && typeof b === "string") {
+        return `Name: ${b}, Age: ${a}`;
+    }
+    else {
+        return `Name: ${a}, Role: ${b ? "Admin" : "User"}`;
+    }
+};
+console.log("Number and String:", userDetails(23, "Mujeeb"));
+console.log("String and Number:", userDetails("Mujeeb", 23));
+console.log("String and Boolean:", userDetails("Mujeeb", true));
+console.log("Boolean and String:", userDetails(false, "Mujeeb"));

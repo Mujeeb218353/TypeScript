@@ -408,3 +408,21 @@ const stringPair: KeyValuePair<string, boolean> = { key: "isValid", value: true 
 
 console.log(numberPair);
 console.log(stringPair); 
+
+// * VID : 20
+// Function Overloading with Generics
+
+const userDetails = <T,U>(a:T, b:U): string => {
+  if(typeof a === "string" && typeof b === "number") {
+    return `Name: ${a}, Age: ${b}`;
+  } else if(typeof a === "number" && typeof b === "string") {
+    return `Name: ${b}, Age: ${a}`
+  }else{
+    return `Name: ${a}, Role: ${b ? "Admin" : "User"}`
+  }
+}
+
+console.log("Number and String:",userDetails(23, "Mujeeb"));
+console.log("String and Number:",userDetails<string, number>("Mujeeb", 23));
+console.log("String and Boolean:",userDetails<string, boolean>("Mujeeb", true));
+console.log("Boolean and String:",userDetails<boolean, string>(false, "Mujeeb"));
