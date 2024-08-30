@@ -658,3 +658,33 @@ temperature.celsius = 37;
 console.log(temperature.fahrenheit+" F");
 temperature.fahrenheit = 98.6;
 console.log(temperature.celsius+" C");
+
+// * VID: 29
+// Static Properties and Methods
+
+class Area {
+
+  public static pi: number = Math.PI;
+
+  public static areaOfCircle(radius: number): number {
+    return Area.pi * radius * radius;
+  }
+
+  public static areaOfSquare(side: number): number {
+    return side * side;
+  }
+
+  public static areaOfRectangle(length: number, breadth: number): number {
+    return length * breadth;
+  }
+
+  public static areaOfTriangle(base: number, height: number): number {
+    return 0.5 * base * height;
+  }
+
+}
+
+console.log("Area of Circle: "+Area.areaOfCircle(5));
+console.log("Area of Square: "+Area.areaOfSquare(5));
+console.log("Area of Rectangle: "+Area.areaOfRectangle(5, 5));
+console.log("Area of Triangle: "+Area.areaOfTriangle(5, 5));
