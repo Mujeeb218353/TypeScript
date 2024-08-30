@@ -497,3 +497,20 @@ const cube = {
     color: 'sky blue'
 };
 console.log("Area of Cube: " + cube.height * cube.length * cube.width + ", Color:" + cube.color);
+// * VID: 32
+// Type Safety with Typeof Guards: Understanding Type Narrowing in TypeScript
+function processValue(value) {
+    if (typeof value === 'number') {
+        console.log(value.toFixed(2));
+    }
+    else if (typeof value === 'string') {
+        console.log(value.toUpperCase());
+    }
+    else {
+        const upperCaseStrings = value.map(str => str.toUpperCase());
+        console.log(upperCaseStrings.join(', '));
+    }
+}
+processValue(123.456);
+processValue("hello");
+processValue(["hello", "world"]);
