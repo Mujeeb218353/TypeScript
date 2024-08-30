@@ -493,6 +493,10 @@ console.log(stud1.Introduce());
 // * VID: 25
 // Access Modifiers
 
+// Public: Accessible from anywhere (inside, outside, and subclasses).
+// Private: Accessible only within the class itself.
+// Protected: Accessible within the class and its subclasses, but not outside.
+
 /*
 
  --------------------------------------------
@@ -544,6 +548,7 @@ class Child extends Parent {
   showProtectedAndPublicName(): void {
     console.log("Child Class");
     console.log("Public: ",this.name1); 
+    // console.log("Private: ",this.name2); not accessible for child
     console.log("Protected: ",this.name3); 
   }
 }
