@@ -282,6 +282,25 @@ class PersonClass {
         this.age = age;
         this.hobbies = hobbies;
     }
+    introduce() {
+        return `Hello, My name is ${this.name} and I am ${this.age} years old and I love ${this.hobbies.join(", ")}`;
+    }
 }
-const personsClass1 = new PersonClass("Muhammad", 23, ["Reading", "Painting"]);
+const personsClass1 = new PersonClass("Muhammad", 23, ["Reading", "Preaching"]);
 console.log(personsClass1.hobbies[0]);
+console.log(personsClass1.introduce());
+// * VID: 24
+// Inheritance and super key word
+class StudentClass extends PersonClass {
+    grade;
+    constructor(name, age, hobbies, grade) {
+        super(name, age, hobbies);
+        this.grade = grade;
+    }
+    Introduce = () => {
+        // return `Hello, My name is ${this.name} and I am ${this.age} years old and I have grade ${this.grade} and I love ${this.hobbies.join(", ")}.`;
+        return `${super.introduce()} and I have grade ${this.grade}.`;
+    };
+}
+const stud1 = new StudentClass("Mujeeb", 23, ["Coding", "Reading"], "A");
+console.log(stud1.Introduce());
