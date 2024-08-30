@@ -271,3 +271,17 @@ const person1 = {
 };
 console.log(person1);
 console.log(person1.name);
+// * VID: 23 OOP
+// Classes and Constructors
+class PersonClass {
+    name;
+    age;
+    hobbies;
+    constructor(name, age, hobbies) {
+        this.name = name;
+        this.age = age;
+        this.hobbies = hobbies;
+    }
+}
+const personsClass1 = new PersonClass("Muhammad", 23, ["Reading", "Painting"]);
+console.log(personsClass1.hobbies[0]);
