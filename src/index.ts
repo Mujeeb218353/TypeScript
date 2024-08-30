@@ -444,6 +444,7 @@ console.log(person1);
 console.log(person1.name);
 
 // * VID: 23 OOP
+// Pillar of OOP are Inheritance, Encapsulation, Abstraction and Polymorphism
 // Classes and Constructors
 
 class PersonClass {
@@ -718,3 +719,49 @@ class Circle extends Shape {
 
 const circle = new Circle(5);
 circle.printArea();
+
+// * VID: 31
+// Interface in class
+
+interface Shape1 {
+  draw(): void;
+}
+
+interface Colorable extends Shape1 {
+  color(): void;
+}
+
+class Circle1 implements Colorable {
+  draw() {
+    console.log("Drawing a circle.");
+  }
+
+  color() {
+    console.log("Coloring the circle.");
+  }
+}
+
+const circle1 = new Circle1();
+circle1.draw();
+circle1.color();
+
+interface Shape2 {
+  length: number;
+  width: number;
+  height: number
+}
+
+interface Shape2 {
+  color: string;
+}
+
+// we can't make type alias name same but interface name
+
+const cube: Shape2 = {
+  length: 2,
+  width: 3,
+  height: 4,
+  color: 'sky blue'
+}
+
+console.log("Area of Cube: "+cube.height*cube.length*cube.width+", Color:"+cube.color);
