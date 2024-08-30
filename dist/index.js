@@ -375,3 +375,27 @@ class EmployeeClass {
 }
 const emp1 = new EmployeeClass("Mujeeb", 23, 50000);
 console.log(emp1.name, emp1.age);
+// * VID: 27
+// Getters and Setters
+class UserData {
+    name;
+    _age; // Using the definite assignment assertion (!)
+    constructor(name) {
+        this.name = name;
+    }
+    set age(age) {
+        if (age < 0 || age > 150) {
+            throw new Error("Age is not valid");
+        }
+        this._age = age;
+    }
+    get age() {
+        if (this._age === undefined) {
+            throw new Error("Age is not defined");
+        }
+        return this._age;
+    }
+}
+const userData = new UserData("Mujeeb-Ur-Rehman");
+userData.age = 23;
+console.log(userData.age);
