@@ -361,3 +361,17 @@ const parent111 = new Parent("Name 1", "Name 2", "Name 3");
 parent111.showPrivateName();
 const child = new Child("Name 1", "Name 2", "Name 3");
 child.showProtectedAndPublicName();
+// * VID: 26
+// Short Hand Properties
+class EmployeeClass {
+    name;
+    age;
+    salary;
+    constructor(name, age, salary) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+    }
+}
+const emp1 = new EmployeeClass("Mujeeb", 23, 50000);
+console.log(emp1.name, emp1.age);

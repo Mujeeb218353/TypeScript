@@ -561,3 +561,18 @@ parent111.showPrivateName()
 
 const child= new Child("Name 1", "Name 2", "Name 3");
 child.showProtectedAndPublicName()
+
+// * VID: 26
+// Short Hand Properties
+
+class EmployeeClass {
+  constructor(
+    public name: string,
+    public age: number,
+    private salary: number
+  ){}
+}
+
+const emp1 = new EmployeeClass("Mujeeb", 23, 50000);
+console.log(emp1.name, emp1.age);
+
