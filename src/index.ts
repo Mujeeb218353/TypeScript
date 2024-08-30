@@ -667,7 +667,7 @@ class Area {
   public static pi: number = Math.PI;
 
   public static areaOfCircle(radius: number): number {
-    return Area.pi * radius * radius;
+    return this.pi * radius * radius;
   }
 
   public static areaOfSquare(side: number): number {
@@ -688,3 +688,33 @@ console.log("Area of Circle: "+Area.areaOfCircle(5));
 console.log("Area of Square: "+Area.areaOfSquare(5));
 console.log("Area of Rectangle: "+Area.areaOfRectangle(5, 5));
 console.log("Area of Triangle: "+Area.areaOfTriangle(5, 5));
+
+// * VID: 30
+// Abstract Classes
+
+abstract class Shape {
+  public abstract calArea(): number;
+  public abstract printArea(): void;
+}
+
+class Circle extends Shape {
+
+  private _radius: number;
+
+  constructor(radius: number) {
+    super();
+    this._radius = radius;
+  }
+
+  public calArea(): number {
+    return Math.PI * this._radius * this._radius;
+  }
+
+  public printArea(): void {
+    console.log("Area of Circle: "+this.calArea());
+  }
+
+}
+
+const circle = new Circle(5);
+circle.printArea();

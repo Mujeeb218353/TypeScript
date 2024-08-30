@@ -442,7 +442,7 @@ console.log(temperature.celsius + " C");
 class Area {
     static pi = Math.PI;
     static areaOfCircle(radius) {
-        return Area.pi * radius * radius;
+        return this.pi * radius * radius;
     }
     static areaOfSquare(side) {
         return side * side;
@@ -458,3 +458,22 @@ console.log("Area of Circle: " + Area.areaOfCircle(5));
 console.log("Area of Square: " + Area.areaOfSquare(5));
 console.log("Area of Rectangle: " + Area.areaOfRectangle(5, 5));
 console.log("Area of Triangle: " + Area.areaOfTriangle(5, 5));
+// * VID: 30
+// Abstract Classes
+class Shape {
+}
+class Circle extends Shape {
+    _radius;
+    constructor(radius) {
+        super();
+        this._radius = radius;
+    }
+    calArea() {
+        return Math.PI * this._radius * this._radius;
+    }
+    printArea() {
+        console.log("Area of Circle: " + this.calArea());
+    }
+}
+const circle = new Circle(5);
+circle.printArea();
