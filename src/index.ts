@@ -489,3 +489,70 @@ class StudentClass extends PersonClass {
 const stud1: StudentClass = new StudentClass("Mujeeb", 23, ["Coding", "Reading"], "A");
 
 console.log(stud1.Introduce());
+
+// * VID: 25
+// Access Modifiers
+
+/*
+
+ --------------------------------------------
+| Modifiers |  Parent  |  Child   | Outside  |
+|-----------|----------|----------|----------|
+| public    |   Yes    |    Yes   |   Yes    |
+| protected |   Yes    |    Yes   |   No     |
+| private   |   Yes    |    No    |   No     |
+|___________|__________|__________|__________|
+
+*/
+
+// Class defined outside the Parent-Child relationship
+class Outside {
+  public name: string;
+
+  constructor(name: string) {
+    this.name = "Public: "+name;
+  }
+}
+
+// Parent class demonstrating different access modifiers
+class Parent {
+  public name1: string; 
+  private name2: string; 
+  protected name3: string; 
+
+  constructor(name1: string, name2: string, name3: string) {
+    this.name1 = name1;
+    this.name2 = name2;
+    this.name3 = name3;
+  }
+
+  showPrivateName(): void {
+    console.log("Parent Class");
+    console.log("Public: ",this.name1);
+    console.log("Private: ",this.name2);
+    console.log("Protected: ",this.name3);
+  }
+}
+
+
+class Child extends Parent {
+  constructor(name1: string, name2: string, name3: string) {
+    super(name1, name2, name3);
+  }
+
+  
+  showProtectedAndPublicName(): void {
+    console.log("Child Class");
+    console.log("Public: ",this.name1); 
+    console.log("Protected: ",this.name3); 
+  }
+}
+
+const outside = new Outside("Name");
+console.log(outside.name);
+
+const parent111 = new Parent("Name 1", "Name 2", "Name 3");
+parent111.showPrivateName()
+
+const child= new Child("Name 1", "Name 2", "Name 3");
+child.showProtectedAndPublicName()
