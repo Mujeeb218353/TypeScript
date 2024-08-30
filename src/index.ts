@@ -605,3 +605,56 @@ class UserData {
 const userData = new UserData("Mujeeb-Ur-Rehman");
 userData.age = 23;
 console.log(userData.age);
+
+// * VID: 28
+// Practice of Classes
+
+// Bank Account
+
+class BankAccount {
+
+  private _balance: number = 0;
+
+  public set balance(balance: number){
+    if(this._balance < 0){
+      throw new Error("Invalid balance")
+    }
+    this._balance = balance;
+  }
+
+  public get balance(): number{
+    return this._balance;
+  }
+
+}
+
+const bankAccount = new BankAccount();
+bankAccount.balance = 100000;
+console.log(bankAccount.balance);
+
+class Temperature {
+
+  private _celsius: number = 0;
+
+  public set celsius(celsius: number){
+    this._celsius = celsius;
+  }
+
+  public get celsius(): number{
+    return this._celsius;
+  }
+
+  public set fahrenheit(fahrenheit: number){
+    this._celsius = (fahrenheit - 32) * 5 / 9;
+  }
+
+  public get fahrenheit():number{
+    return ( this._celsius * 9 ) / 5 + 32;
+  }
+}
+
+const temperature = new Temperature();
+temperature.celsius = 37;
+console.log(temperature.fahrenheit+" F");
+temperature.fahrenheit = 98.6;
+console.log(temperature.celsius+" C");

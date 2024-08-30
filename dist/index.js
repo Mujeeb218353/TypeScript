@@ -399,3 +399,41 @@ class UserData {
 const userData = new UserData("Mujeeb-Ur-Rehman");
 userData.age = 23;
 console.log(userData.age);
+// * VID: 28
+// Practice of Classes
+// Bank Account
+class BankAccount {
+    _balance = 0;
+    set balance(balance) {
+        if (this._balance < 0) {
+            throw new Error("Invalid balance");
+        }
+        this._balance = balance;
+    }
+    get balance() {
+        return this._balance;
+    }
+}
+const bankAccount = new BankAccount();
+bankAccount.balance = 100000;
+console.log(bankAccount.balance);
+class Temperature {
+    _celsius = 0;
+    set celsius(celsius) {
+        this._celsius = celsius;
+    }
+    get celsius() {
+        return this._celsius;
+    }
+    set fahrenheit(fahrenheit) {
+        this._celsius = (fahrenheit - 32) * 5 / 9;
+    }
+    get fahrenheit() {
+        return (this._celsius * 9) / 5 + 32;
+    }
+}
+const temperature = new Temperature();
+temperature.celsius = 37;
+console.log(temperature.fahrenheit + " F");
+temperature.fahrenheit = 98.6;
+console.log(temperature.celsius + " C");
